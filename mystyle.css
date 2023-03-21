@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+main {
+  margin: 0 5rem;
+}
+.section-container {
+  max-width: 100rem;
+  margin: 4.5rem;
+  gap: 5rem;
+}
+
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.text-container {
+  padding-right: 12rem;
+}
+
+.text-heading {
+  font-size: 5.6rem;
+  color: hsl(300, 43%, 22%);
+  margin-bottom: 2rem;
+  letter-spacing: -0.1rem;
+}
+
+.text-description {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: hsl(303, 10%, 53%);
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  background-color: hsl(300, 24%, 96%);
+  padding: 2rem 3.2rem;
+  border-radius: 8px;
+  min-width: 44rem;
+}
+
+.icon-container:nth-child(1) {
+  transform: translateX(-10rem);
+}
+.icon-container:nth-child(2) {
+  transform: translateX(-5rem);
+}
+
+.review-stars {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.testimonial-box {
+  background-color: hsl(300, 43%, 22%);
+  padding: 5rem 2.5rem;
+  border-radius: 0.8rem;
+}
+.testimonial-box:nth-child(2) {
+  transform: translateY(2.5rem);
+}
+
+.testimonial-box:nth-child(3) {
+  transform: translateY(5rem);
+}
+
+.img-info-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.image {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.5rem;
+}
+.verified {
+  color: hsl(333, 80%, 67%);
+  font-size: 1.5rem;
+}
+
+.testimonial {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: hsl(303, 10%, 53%);
+}
+
+@media (max-width: 25em) {
+  main {
+    margin: 0;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    background-image: url(./images/bg-pattern-top-mobile.svg),
+      url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: top, bottom;
+  }
+  .section-container {
+    max-width: 38rem;
+    margin: 5rem 0rem 2.5rem 0;
+    gap: 0;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .text-heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .text-container {
+    padding: 0;
+  }
+  .text-description {
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 2.5rem 2.5rem;
+  }
+
+  .icon-container {
+    min-width: 0;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 7rem;
+  }
+
+  .icon-container:nth-child(1) {
+    transform: translateX(0);
+  }
+  .icon-container:nth-child(2) {
+    transform: translateX(0);
+  }
+
+  .testimonial-box {
+    margin: 0 2rem;
+  }
+
+  .testimonial-box:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .testimonial-box:nth-child(3) {
+    transform: translateY(0);
+  }
+}
